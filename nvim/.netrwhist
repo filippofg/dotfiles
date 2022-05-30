@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/phil/.config/waybar'
+let g:netrw_dirhist_3='/home/phil/.local/share/plasma/desktoptheme/Nordic-Darker-Transparent'
+let g:netrw_dirhist_2='/home/phil/.local/share/plasma/desktoptheme/Nordic-Darker-Transparent/widgets'
+let g:netrw_dirhist_1='/home/phil/.local/share/plasma/desktoptheme/Nordic-Darker-Transparent'
+let g:netrw_dirhist_0='/home/phil/.local/share/plasma/desktoptheme/Nordic-Darker-Transparent/preview'
+let g:netrw_dirhist_9='/home/phil/.local/share/plasma/desktoptheme/Nordic-Darker-Transparent'
+let g:netrw_dirhist_8='/home/phil/.local/share/plasma/desktoptheme/Nordic-Darker-Transparent/icons'
+let g:netrw_dirhist_7='/home/phil/.local/share/plasma/desktoptheme/Nordic-Darker-Transparent'
+let g:netrw_dirhist_6='/home/phil/.local/share/plasma/desktoptheme/Nordic-Darker-Transparent/dialogs'
+let g:netrw_dirhist_5='/home/phil/.local/share/plasma/desktoptheme/Nordic-Darker-Transparent'

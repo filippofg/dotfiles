@@ -1,0 +1,27 @@
+## Aliases
+# zsh
+alias zsh-aliases='$EDITOR ~/.zsh/aliases'
+alias zsh-keys='$EDITOR ~/.zsh/zshkeys'
+alias zsh-env='$EDITOR ~/.zsh/env'
+alias zsh-conf='$EDITOR ~/.zshrc'
+alias zsh-reload='source ~/.zshrc'
+
+# sudo alias expansion
+alias sudo='sudo '
+
+# ls
+alias l='ls --color=auto'
+alias ls='ls --color=auto -F'
+alias la='ls --color=auto -AF'
+alias ll='ls --color=auto -lAhF'
+alias lt='ls --color=auto -lthF'
+
+# pacman
+alias pacman='pacman --color=always'
+alias yay='yay --color=always'
+
+# prompt insecure
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+
