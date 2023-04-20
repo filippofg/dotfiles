@@ -1,0 +1,148 @@
+###########
+# aliases #
+###########
+alias zsh-conf='$EDITOR ~/.zshrc'
+alias zsh-reload='source ~/.zshrc'
+# oh-my-zsh
+alias zsh-aliases='$EDITOR ~/.zsh/aliases'
+alias zsh-keys='$EDITOR ~/.zsh/zshkeys'
+alias zsh-env='$EDITOR ~/.zsh/env'
+
+# Sudo alias expansion
+alias sudo='sudo '
+
+# ls
+alias l='ls --color=auto'
+alias ls='ls --color=auto -F'
+alias la='ls --color=auto -AF'
+alias ll='ls --color=auto -lAhF'
+alias lt='ls --color=auto -lthF'
+alias ltr='ls --color=auto -lthrF'
+#alias l='exa'
+#alias ls='exa -F'
+#alias la='exa -aF'
+#alias ll='exa -laF'
+#alias lt='exa -laF -t modified -s modified -r '
+
+# Useful unix commands
+#alias rm='rm -i'
+#alias fd='fd -j2'
+alias vim='nvim'
+alias hgrep='grep -Hnr'
+#alias exa='exa -F'
+
+# Apt
+#alias upd='sudo apt update'
+#alias upg='sudo apt upgrade'
+#alias inst='sudo apt install'
+#alias autorm='sudo apt autoremove'
+#alias upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove'
+#alias installed='apt list --installed'
+#alias upgradable='apt list --upgradable'
+
+# Pacman
+#alias pac='sudo pacman --color=always'
+#alias pacsearch='pacman --color=always -Ss'
+alias pacman='pacman --color=always'
+alias yay='yay --color=always'
+
+# Zypper
+#alias szy='sudo zypper'
+#alias zypp='sudo zypper'
+#alias zyp='zypper'
+#alias inst='sudo zypper install'
+#alias upg='sudo zypper update'
+#alias dup='sudo zypper dup --auto-agree-with-licenses'
+#alias dup='sudo zypper dist-upgrade --allow-downgrade'
+
+# Runit
+#alias rsm-local='SVDIR=~/.local/runit/service rsm'
+#alias virt-start='sv start dnsmasq libvirtd virtlockd virtlogd'
+#alias virt-stop='sv stop dnsmasq libvirtd virtlockd virtlogd'
+
+# Development
+alias g++20='g++ -std=c++20 -pedantic -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion -Werror'
+
+# Misc
+alias rsyncv='rsync --info=progress2'
+alias dmesgh='dmesg -H --color=always'
+alias mpv-play='mpv . &>/dev/null & disown'
+alias nuke='killall -9'
+alias stereo-on='amixer -q -c 0 -- sset Headphone 100% 100% unmute'
+alias fm='xdg-open .'
+alias killme='pkill -TERM -u $(whoami)' 
+alias zat='zathura'
+alias py='python'
+alias ptop='powertop'
+#alias todo='vim ~/.todo'
+#alias colorpicker='grabc'
+alias nfetch='neofetch'
+
+# Novideo
+#alias nvidia-on='sudo tee /proc/acpi/bbswitch <<<ON'
+#alias nvidia-off='sudo tee /proc/acpi/bbswitch <<<OFF'
+#alias nvidia-run='optirun -- env PRIMUS_libGLa=/usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.0:/usr/lib/i386-linux-gnu/libGLX_nvidia.so.0'
+#alias bbswitch-state='cat /proc/acpi/bbswitch'
+#alias bbswitch-off='tee /proc/acpi/bbswitch <<<OFF'
+#alias bbswitch-on='tee /proc/acpi/bbswitch <<<ON'
+#alias gpu-state='sudo prime-select get-current'
+#alias nvidiaon='sudo prime-select nvidia'
+#alias intelon='sudo prime-select intel'
+#alias fucknvidia='sudo prime-select next-boot intel'
+
+# i3 session aliases
+alias i3conf='$EDITOR ~/.config/i3/config'
+#alias polybar-start='~/.config/polybar/launch.sh'
+#alias xrdb-merge='xrdb -merge ~/.config/Xresources'
+#alias compton-start='compton --backend glx --config ~/.config/compton/compton.conf -b'
+#alias compton-restart='pkill compton && compton --backend glx --config ~/.config/compton/compton.conf -b'
+#alias compton-conf='$EDITOR ~/.config/compton/compton.conf'
+alias copy='xclip -selection clipboard'
+
+# Wayland session aliases
+alias swayconf='$EDITOR ~/.config/sway/config'
+alias waybar-start='~/.config/waybar/waybar.sh'
+#alias stamp='~/.bin/sway/menus/rofi-screenshot.sh'
+
+# Uni aliases
+#alias matlab-cli='matlab -nosplash -nodesktop -nojvm'
+#alias matlab-cli='matlab -nosplash -nodesktop'
+#alias artisan='php artisan'
+#alias artisan-cache='php artisan config:cache && php artisan cache:clear'
+#alias serve='php artisan serve'
+#alias artisan-route-list='php artisan route:list'
+#alias migrate:freshs='php artisan migrate:fresh --seed'
+#alias mysqlr='mysql -u root'
+#alias gcc-gl='gcc -lGL -lGLU -lglut'
+#alias gcc-glw='gcc -lGL -lGLU -lglut -lGLEW'
+
+# Less-serious aliases
+#alias madlad='matlab'
+alias ora-esatta='tty-clock -Ssc'
+alias fuckoff='wmctrl -c'
+alias scroto='scrot'
+alias ifrit='killall -9'
+alias severus='python'
+#alias calc='ghci'
+alias :q='echo "Bonanotte."'
+alias :w='echo ":what the fuck"'
+alias :wq='echo "Are you ok?"'
+
+# Just use zsh built-in "take"...
+function mkcd {
+  mkdir -p -- "$1" && cd -P -- "$1"
+}
+
+# Unix rm + confirmation prompt
+function rm { /bin/rm "$@" -i -I; }
+
+# Clear zsh history commands
+function zsh-clear-history {
+	echo "Really clear zsh history? y/n"
+	read response
+	if [ "$response" = "y" ]; then
+		echo "" > ~/.zsh_history
+		echo "Done"
+	fi
+}
+
