@@ -71,3 +71,23 @@ PACKAGES=(
 )
 
 apt install -y ${PACKAGES[*]}
+
+
+#
+# ZSH config
+#
+
+# oh-my-zsh
+if curl -fsLO https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+then
+    sed -i 's/exec zsh -l/#exec zsh -l/g' ./install.sh
+    sh ./install.sh
+    rm ./install.sh
+fi
+
+# Plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+chsh -s /bin/zsh $USER_NAME
