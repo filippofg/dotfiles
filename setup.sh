@@ -26,30 +26,14 @@ while getopts ":h" option; do
    esac
 done
 
-if [ "$EUID" -ne 0 ]; then
-    echo -e "Run as root"
-    exit 1
-fi
-
-if [ "$#" -ne 1 ]; then
-    print_usage
-    exit
-fi
+CONFIG_DIR=$THIS_FOLDER/config
 
 #
 # Copy configuration files
 #
-USER_NAME=$1
-USER_HOME=/home/$USER_NAME
-USER_CONFIG_DIR=$USER_HOME/.config
-
-cp $THIS_FOLDER/etc/* /etc -r
-
-if [ ! -d $USER_CONFIG_DIR ]; then
-    mkdir -p $USER_CONFIG_DIR
-fi
-
-cp $THIS_FOLDER/.config/* $USER_CONFIG_DIR -r
+sudo cp $CONFIG_DIR/etc/* /etc -r
+cp $CONFIG_DIR/.config $HOME -r
+cp $CONFIG_DIR/{.zsh,.zshrc,.p10k.zsh,.start-page} $HOME -r
 
 #
 # Install packages
@@ -70,13 +54,11 @@ PACKAGES=(
     "tree"
 )
 
-apt install -y ${PACKAGES[*]}
-
+sudo apt install -y ${PACKAGES[*]}
 
 #
 # ZSH config
 #
-
 # oh-my-zsh
 if curl -fsLO https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 then
@@ -90,4 +72,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-chsh -s /bin/zsh $USER_NAME
+chsh -s /bin/zsh
+
