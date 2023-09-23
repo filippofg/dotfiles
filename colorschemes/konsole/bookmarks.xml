@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xbel>
+<xbel xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks" xmlns:kdepriv="http://www.kde.org/kdepriv" dbusName="konsole">
+ <bookmark href="file:///home/phil/Documents/Software">
+  <title>Software</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name=""/>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/phil">
+  <title>phil</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name=""/>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="ssh://dietpi@192.168.178.2">
+  <title>dietpi on 192.168.178.2</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name=""/>
+   </metadata>
+  </info>
+ </bookmark>
+</xbel>

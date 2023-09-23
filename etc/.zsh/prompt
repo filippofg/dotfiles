@@ -1,0 +1,11 @@
+if [ $UID -eq "0" ]; then
+    USERCOLOR="red"
+else
+    USERCOLOR="blue"
+fi
+
+NEWLINE=$'\n'
+
+PROMPT="%B%F{$USERCOLOR}%n%f%b%F{white}@%f%B%F{green}%m%f%b%F{magenta}::%f %F{yellow}%~%f${NEWLINE}%F{black}λ%f "
+
+RPROMPT="%(?..%F{red}%? ↵%f) %F{white}%*%f"
