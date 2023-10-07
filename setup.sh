@@ -1,4 +1,4 @@
-#!/usr/bin/env bash#!/usr/bin/env bash
+#!/usr/bin/env bash
 
 set -e
 set -u
@@ -10,20 +10,19 @@ set -o pipefail
 
 THIS_FOLDER=$(dirname $0)
 
-print_usage() 
-{
-    echo -e "Usage:\t$0 username"
-    echo -e ""
-    echo -e "Remember to edit the script with correct distro-dependent settings!"
+print_usage() {
+	echo -e "Usage:\t$0 username"
+	echo -e ""
+	echo -e "Remember to edit the script with correct distro-dependent settings!"
 }
 
 while getopts ":h" option; do
-   case $option in
-      h) # display Help
-         print_usage
-         exit
-	 ;;
-   esac
+	case $option in
+	h) # display Help
+		print_usage
+		exit
+		;;
+	esac
 done
 
 CONFIG_DIR=$THIS_FOLDER/config
@@ -40,18 +39,18 @@ cp $CONFIG_DIR/{.zsh,.zshrc,.p10k.zsh,.start-page} $HOME -r
 #
 #
 PACKAGES=(
-    "git"
-    "curl"
-    "make"
-    "cmake"
-    "htop"
-    "tmux"
-    "zsh"
-    "vim"
-    "unzip"
-    "zip"
-    "rsync"
-    "tree"
+	"git"
+	"curl"
+	"make"
+	"cmake"
+	"htop"
+	"tmux"
+	"zsh"
+	"vim"
+	"unzip"
+	"zip"
+	"rsync"
+	"tree"
 )
 
 sudo apt install -y ${PACKAGES[*]}
@@ -60,11 +59,10 @@ sudo apt install -y ${PACKAGES[*]}
 # ZSH config
 #
 # oh-my-zsh
-if curl -fsLO https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-then
-    sed -i 's/exec zsh -l/#exec zsh -l/g' ./install.sh
-    sh ./install.sh
-    rm ./install.sh
+if curl -fsLO https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh; then
+	sed -i 's/exec zsh -l/#exec zsh -l/g' ./install.sh
+	sh ./install.sh
+	rm ./install.sh
 fi
 
 # Plugins
@@ -74,12 +72,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # MesloLGS NF fonts
 BASE_FONT_URL=https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF
-FONT_STYLES=( "Regular" "Bold" "Italic" "Bold%20Italic")
-for $i in $FONT_STYLES; do
-    curl -fsL "$BASE_FONT_URL$i.ttf" -o "MesloLGS-NF-$i.ttf"
+FONT_STYLES=("Regular" "Bold" "Italic" "Bold%20Italic")
+for i in $FONT_STYLES; do
+	curl -fsL "$BASE_FONT_URL$i.ttf" -o "MesloLGS-NF-$i.ttf"
 done
 sudo mv *.ttf /usr/share/fonts/TTF
 
 mkdir -p ~/.local/share/konsole
 cp $CONFIG_DIR/Personal.profile ~/.local/share/konsole
-
