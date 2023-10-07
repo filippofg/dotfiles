@@ -71,9 +71,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # MesloLGS NF fonts
-BASE_FONT_URL=https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF
+BASE_FONT_URL=https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20
 FONT_STYLES=("Regular" "Bold" "Italic" "Bold%20Italic")
-for i in $FONT_STYLES; do
+for i in ${FONT_STYLES[*]}; do
 	curl -fsL "$BASE_FONT_URL$i.ttf" -o "MesloLGS-NF-$i.ttf"
 done
 sudo mv *.ttf /usr/share/fonts/TTF
