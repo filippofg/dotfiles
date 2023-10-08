@@ -77,7 +77,7 @@ FONT_STYLES=("Regular" "Bold" "Italic" "Bold%20Italic")
 for i in ${FONT_STYLES[*]}; do
 	curl -fsL "$BASE_FONT_URL$i.ttf" -o "MesloLGS-NF-$i.ttf"
 done
-sudo mv *.ttf /usr/share/fonts/TTF
+sudo mv *.ttf /usr/local/share/fonts
 
 mkdir -p ~/.local/share/konsole
 cp $CONFIG_DIR/Personal.profile ~/.local/share/konsole
