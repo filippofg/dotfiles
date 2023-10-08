@@ -52,6 +52,7 @@ PACKAGES=(
 	"zip"
 	"rsync"
 	"tree"
+	"tldr"
 )
 
 sudo apt install -y ${PACKAGES[*]}
@@ -81,3 +82,9 @@ sudo mv *.ttf /usr/local/share/fonts
 
 mkdir -p ~/.local/share/konsole
 cp $CONFIG_DIR/Personal.profile ~/.local/share/konsole
+
+#
+# Package configs
+#
+tldr -u
+
