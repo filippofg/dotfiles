@@ -53,6 +53,9 @@ PACKAGES=(
 	"rsync"
 	"tree"
 	"tldr"
+	"s-tui"
+	"lm-sensors"
+	"stress"
 )
 
 sudo apt install -y ${PACKAGES[*]}
@@ -87,4 +90,3 @@ cp $CONFIG_DIR/Personal.profile ~/.local/share/konsole
 # Package configs
 #
 tldr -u
-
