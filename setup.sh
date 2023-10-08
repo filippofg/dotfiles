@@ -47,6 +47,7 @@ PACKAGES=(
 	"tmux"
 	"zsh"
 	"vim"
+	"neovim"
 	"unzip"
 	"zip"
 	"rsync"
