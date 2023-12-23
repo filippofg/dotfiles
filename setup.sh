@@ -57,8 +57,20 @@ PACKAGES=(
 	"lm-sensors"
 	"stress"
 )
+WAYLAND_PACKAGES=(
+        "sway"
+        "swayidle"
+        "swaybg"
+        "swayimg"
+        "swaylock"
+        "waybar"
+        "wl-clipboard"
+        "bemenu"
+        "bemenu-wayland"
+        "mako"
+)
 
-sudo apt install -y ${PACKAGES[*]}
+sudo pacman -Syu --noconfirm ${PACKAGES[*]} ${WAYLAND_PACKAGES[*]}
 
 #
 # ZSH config
