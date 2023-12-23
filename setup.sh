@@ -68,6 +68,11 @@ WAYLAND_PACKAGES=(
         "bemenu"
         "bemenu-wayland"
         "mako"
+        "grim"
+        "slurp"
+        "swappy"
+        "kitty"
+        "gammastep"
 )
 
 sudo pacman -Syu --noconfirm ${PACKAGES[*]} ${WAYLAND_PACKAGES[*]}
