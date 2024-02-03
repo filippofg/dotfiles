@@ -43,6 +43,10 @@ link-config-dir "$SOURCE_CONFIG_DIR/editor" "$DESTINATION_CONFIG_DIR"
 # misc
 link-config-dir "$SOURCE_CONFIG_DIR/misc" "$HOME"
 
+# konsole profile
+mkdir -p "$HOME/.local/share/konsole"
+ln -s "$SOURCE_CONFIG_DIR/Personal.profile" "$HOME/.local/share/konsole"
+
 #
 # Install packages
 #
@@ -62,7 +66,6 @@ PACKAGES=(
 	"tree"
 	"tldr"
 	"s-tui"
-	"lm-sensors"
 	"stress"
 )
 # WAYLAND_PACKAGES=(
@@ -99,9 +102,6 @@ fi
 git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
-
-mkdir -p ~/.local/share/konsole
-cp "$SOURCE_CONFIG_DIR/Personal.profile" "$HOME/.local/share/konsole"
 
 #
 # Package configs

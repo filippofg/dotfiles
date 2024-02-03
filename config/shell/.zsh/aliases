@@ -26,19 +26,8 @@ alias ltr='ls --color=auto -lthrF'
 
 # Useful unix commands
 #alias rm='rm -i'
-#alias fd='fd -j2'
-alias vim='nvim'
+#alias vim='nvim'
 alias hgrep='grep -Hnr'
-#alias exa='exa -F'
-
-# Apt
-#alias upd='sudo apt update'
-#alias upg='sudo apt upgrade'
-#alias inst='sudo apt install'
-#alias autorm='sudo apt autoremove'
-#alias upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove'
-#alias installed='apt list --installed'
-#alias upgradable='apt list --upgradable'
 
 # Pacman
 #alias pac='sudo pacman --color=always'
@@ -46,25 +35,12 @@ alias hgrep='grep -Hnr'
 alias pacman='pacman --color=always'
 alias yay='yay --color=always'
 
-# Zypper
-#alias szy='sudo zypper'
-#alias zypp='sudo zypper'
-#alias zyp='zypper'
-#alias inst='sudo zypper install'
-#alias upg='sudo zypper update'
-#alias dup='sudo zypper dup --auto-agree-with-licenses'
-#alias dup='sudo zypper dist-upgrade --allow-downgrade'
-
-# Runit
-#alias rsm-local='SVDIR=~/.local/runit/service rsm'
-#alias virt-start='sv start dnsmasq libvirtd virtlockd virtlogd'
-#alias virt-stop='sv stop dnsmasq libvirtd virtlockd virtlogd'
-
 # Development
 alias g++20='g++ -std=c++20 -pedantic -pedantic-errors -Wall -Weffc++ -Wextra -Wsign-conversion -Werror'
 
 # Misc
-alias rsyncv='rsync --info=progress2'
+alias lzd='lazydocker'
+alias rsync='rsync --info=progress2'
 alias dmesgh='dmesg -H --color=always'
 alias mpv-play='mpv . &>/dev/null & disown'
 alias nuke='killall -9'
@@ -78,46 +54,12 @@ alias ptop='powertop'
 #alias colorpicker='grabc'
 alias nfetch='neofetch'
 
-# Novideo
-#alias nvidia-on='sudo tee /proc/acpi/bbswitch <<<ON'
-#alias nvidia-off='sudo tee /proc/acpi/bbswitch <<<OFF'
-#alias nvidia-run='optirun -- env PRIMUS_libGLa=/usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.0:/usr/lib/i386-linux-gnu/libGLX_nvidia.so.0'
-#alias bbswitch-state='cat /proc/acpi/bbswitch'
-#alias bbswitch-off='tee /proc/acpi/bbswitch <<<OFF'
-#alias bbswitch-on='tee /proc/acpi/bbswitch <<<ON'
-#alias gpu-state='sudo prime-select get-current'
-#alias nvidiaon='sudo prime-select nvidia'
-#alias intelon='sudo prime-select intel'
-#alias fucknvidia='sudo prime-select next-boot intel'
-
-# i3 session aliases
-alias i3conf='$EDITOR ~/.config/i3/config'
-#alias polybar-start='~/.config/polybar/launch.sh'
-#alias xrdb-merge='xrdb -merge ~/.config/Xresources'
-#alias compton-start='compton --backend glx --config ~/.config/compton/compton.conf -b'
-#alias compton-restart='pkill compton && compton --backend glx --config ~/.config/compton/compton.conf -b'
-#alias compton-conf='$EDITOR ~/.config/compton/compton.conf'
-alias copy='xclip -selection clipboard'
-
 # Wayland session aliases
 alias swayconf='$EDITOR ~/.config/sway/config'
 alias waybar-start='~/.config/waybar/waybar.sh'
 #alias stamp='~/.bin/sway/menus/rofi-screenshot.sh'
 
-# Uni aliases
-#alias matlab-cli='matlab -nosplash -nodesktop -nojvm'
-#alias matlab-cli='matlab -nosplash -nodesktop'
-#alias artisan='php artisan'
-#alias artisan-cache='php artisan config:cache && php artisan cache:clear'
-#alias serve='php artisan serve'
-#alias artisan-route-list='php artisan route:list'
-#alias migrate:freshs='php artisan migrate:fresh --seed'
-#alias mysqlr='mysql -u root'
-#alias gcc-gl='gcc -lGL -lGLU -lglut'
-#alias gcc-glw='gcc -lGL -lGLU -lglut -lGLEW'
-
 # Less-serious aliases
-#alias madlad='matlab'
 alias ora-esatta='tty-clock -Ssc'
 alias fuckoff='wmctrl -c'
 alias scroto='scrot'
@@ -125,7 +67,7 @@ alias ifrit='killall -9'
 alias severus='python'
 #alias calc='ghci'
 alias :q='echo "Bonanotte."'
-alias :w='echo ":what the fuck"'
+alias :w='echo ":w cosa?"'
 alias :wq='echo "Are you ok?"'
 
 # Just use zsh built-in "take"...
