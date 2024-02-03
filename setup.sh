@@ -8,34 +8,43 @@ set -o pipefail
 # setup.sh
 #
 
-THIS_FOLDER=$(dirname $0)
-
-print_usage() {
-	echo -e "Usage:\t$0 username"
-	echo -e ""
-	echo -e "Remember to edit the script with correct distro-dependent settings!"
+function link-config-dir() {
+	SOURCE=$1
+	DESTINATION=$2
+	echo "Linking $SOURCE configs"
+	
+	shopt -s dotglob # set dotglob to match hidden files
+	
+	for file in "$SOURCE"/*; do
+		if ! ln -s "$(realpath $file)" "$DESTINATION" > /dev/null 2>&1; then
+			echo "Skipping $file"
+		fi
+	done
+	
+	shopt -u dotglob # unset dotglob
 }
 
-while getopts ":h" option; do
-	case $option in
-	h) # display Help
-		print_usage
-		exit
-		;;
-	esac
-done
-
-CONFIG_DIR=$THIS_FOLDER/config
+THIS_FOLDER="$(dirname $0)"
+SOURCE_CONFIG_DIR=$THIS_FOLDER/config
+DESTINATION_CONFIG_DIR=$HOME/.config
 
 #
 # Copy configuration files
 #
-cp $CONFIG_DIR/.config $HOME -r
-cp $CONFIG_DIR/{.zsh,.zshrc,.p10k.zsh,.start-page} $HOME -r
+
+# shell
+link-config-dir "$SOURCE_CONFIG_DIR/shell" "$HOME"
+# tmux
+link-config-dir "$SOURCE_CONFIG_DIR/tmux" "$DESTINATION_CONFIG_DIR"
+# session
+link-config-dir "$SOURCE_CONFIG_DIR/session" "$DESTINATION_CONFIG_DIR"
+# editor
+link-config-dir "$SOURCE_CONFIG_DIR/editor" "$DESTINATION_CONFIG_DIR"
+# misc
+link-config-dir "$SOURCE_CONFIG_DIR/misc" "$HOME"
 
 #
 # Install packages
-#
 #
 PACKAGES=(
 	"git"
@@ -56,25 +65,25 @@ PACKAGES=(
 	"lm-sensors"
 	"stress"
 )
-WAYLAND_PACKAGES=(
-        "sway"
-        "swayidle"
-        "swaybg"
-        "swayimg"
-        "swaylock"
-        "waybar"
-        "wl-clipboard"
-        "bemenu"
-        "bemenu-wayland"
-        "mako"
-        "grim"
-        "slurp"
-        "swappy"
-        "kitty"
-        "gammastep"
-)
+# WAYLAND_PACKAGES=(
+# 	"sway"
+# 	"swayidle"
+# 	"swaybg"
+# 	"swayimg"
+# 	"swaylock"
+# 	"waybar"
+# 	"wl-clipboard"
+# 	"bemenu"
+# 	"bemenu-wayland"
+# 	"mako"
+# 	"grim"
+# 	"slurp"
+# 	"swappy"
+# 	"kitty"
+# 	"gammastep"
+# )
 
-sudo pacman -Syu --noconfirm ${PACKAGES[*]} ${WAYLAND_PACKAGES[*]}
+sudo pacman -Syu --noconfirm ${PACKAGES[*]} # ${WAYLAND_PACKAGES[*]}
 
 #
 # ZSH config
@@ -87,20 +96,12 @@ if curl -fsLO https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh; th
 fi
 
 # Plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-# MesloLGS NF fonts
-BASE_FONT_URL=https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20
-FONT_STYLES=("Regular" "Bold" "Italic" "Bold%20Italic")
-for i in ${FONT_STYLES[*]}; do
-	curl -fsL "$BASE_FONT_URL$i.ttf" -o "MesloLGS-NF-$i.ttf"
-done
-sudo mv *.ttf /usr/local/share/fonts
+git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
 
 mkdir -p ~/.local/share/konsole
-cp $CONFIG_DIR/Personal.profile ~/.local/share/konsole
+cp "$SOURCE_CONFIG_DIR/Personal.profile" "$HOME/.local/share/konsole"
 
 #
 # Package configs
