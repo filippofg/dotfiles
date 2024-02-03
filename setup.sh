@@ -30,7 +30,6 @@ CONFIG_DIR=$THIS_FOLDER/config
 #
 # Copy configuration files
 #
-sudo cp $CONFIG_DIR/etc/* /etc -r
 cp $CONFIG_DIR/.config $HOME -r
 cp $CONFIG_DIR/{.zsh,.zshrc,.p10k.zsh,.start-page} $HOME -r
 
