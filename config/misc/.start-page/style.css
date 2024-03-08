@@ -1,0 +1,108 @@
+body {
+	font-family: 'Hack';
+	font-size: 10px;
+	/* background-color: #272a30; */
+	/* Nord */
+	/* background-color: #2e3440; */
+	/* City Lights */
+	/* background-color: #1d252c; */
+	/* Gruvbox Dark Hard */
+	/* background-color: #1d2021; */
+	/* Tomorrow Night Burns */
+	background-color: #252525;
+	height: 100%;
+	color: #cfcfcf;
+}
+
+ul li {
+	list-style-type: symbols(cyclic '├');
+	/*margin-left: 70px;*/
+	/* 	margin-left: -20px; */
+	/* color: #98c379; */
+	color: #5d6f71;
+}
+
+li.first {
+	list-style-type: symbols(cyclic '┌');
+	/* '┬'); */
+}
+
+li.last {
+	list-style-type: symbols(cyclic '└');
+}
+
+a:link {
+	color: #ba8586;
+}
+
+a:visited {
+	/* color: #56b6c2; */
+	color: #e06c75;
+}
+
+section.container {
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 30px;
+	display: table;
+}
+
+div.container-flex {
+	/* float:left; */
+	display: table-cell;
+	margin: auto;
+}
+
+div.left {
+	padding-left: 5px;
+	padding-right: 20px;
+}
+
+div.right {
+	padding-left: 20px;
+	padding-right: 5px;
+}
+
+.header {
+	align-content: center;
+	margin: 30px;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.tree {
+	font-family: 'Ubuntu Mono';
+	font-size: 20px;
+}
+
+#clock {
+	padding-top: 12px;
+	font-size: 40px;
+	margin-bottom: 5px;
+}
+
+#date {
+	margin: 0px;
+	font-size: 14px;
+}
+
+#eliminami {
+	width: 0px;
+	height: 0px;
+	font-size: 0px;
+	border: #000000ff solid 0px;
+}
+
+#piedatore {
+	position: absolute;
+	/* height: 30px;
+	width: 100%; */
+	bottom: 0;
+}
