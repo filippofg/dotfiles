@@ -27,6 +27,7 @@ function link-config-dir() {
 THIS_FOLDER="$(dirname $0)"
 SOURCE_CONFIG_DIR=$THIS_FOLDER/config
 DESTINATION_CONFIG_DIR=$HOME/.config
+POST_INSTALL_SCRIPTS_DIR=$THIS_FOLDER/post-install.d
 
 #
 # Copy configuration files
@@ -89,21 +90,15 @@ PACKAGES=(
 sudo pacman -Syu --noconfirm ${PACKAGES[*]} # ${WAYLAND_PACKAGES[*]}
 
 #
-# ZSH config
-#
-# oh-my-zsh
-if curl -fsLO https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh; then
-	sed -i 's/exec zsh -l/#exec zsh -l/g' ./install.sh
-	sh ./install.sh
-	rm ./install.sh
-fi
-
-# Plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
-
-#
 # Package configs
 #
-tldr -u
+
+for script in "$POST_INSTALL_SCRIPTS_DIR"/*.sh; do
+	echo "--- Post-install script $script ---"
+	chmod +x "$script"
+	if ! sh "$script"; then
+		echo -e "[ERROR] $script returned $? ---\n"
+	else
+		echo -e "[SUCCESS] $script\n"
+	fi
+done
