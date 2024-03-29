@@ -76,7 +76,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Tmux plugin
 ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOCONNECT=true
+ZSH_TMUX_AUTOCONNECT=false
 ZSH_TMUX_CONFIG=~/.config/tmux/tmux.conf
 
 # Which plugins would you like to load?
@@ -84,7 +84,7 @@ ZSH_TMUX_CONFIG=~/.config/tmux/tmux.conf
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions tmux docker docker-compose)
+plugins=(git zsh-autosuggestions tmux docker docker-compose colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
