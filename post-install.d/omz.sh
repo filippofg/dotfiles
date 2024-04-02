@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 if curl -fsLO https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh; then
-	./install.sh --unattended --keep-zshrc
+	chmod +x ./install.sh
+    ./install.sh --unattended --keep-zshrc
 	rm ./install.sh
 fi
 
@@ -11,7 +12,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
 
 # mcfly
-if curl -LSfs https://raw.githubusercontent.com/cantino/mcfly/master/ci/install.sh; then
+if curl -fsLO https://raw.githubusercontent.com/cantino/mcfly/master/ci/install.sh; then
+    chmod +x ./install.sh
     sudo ./install.sh --git cantino/mcfly
     rm ./install.sh
 fi

@@ -92,11 +92,10 @@ sudo pacman -Syu --noconfirm ${PACKAGES[*]} # ${WAYLAND_PACKAGES[*]}
 #
 # Package configs
 #
-
 for script in "$POST_INSTALL_SCRIPTS_DIR"/*.sh; do
 	echo "--- Post-install script $script ---"
 	chmod +x "$script"
-	if ! sh "$script"; then
+	if ! ./"$script"; then
 		echo -e "[ERROR] $script returned $? ---\n"
 	else
 		echo -e "[SUCCESS] $script\n"

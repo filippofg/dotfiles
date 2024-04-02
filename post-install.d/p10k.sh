@@ -9,8 +9,8 @@ FONTS=(
     "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf"
 )
 
-mkdir $TMP_DIR
-cd $TMP_DIR
+mkdir "$TMP_DIR"
+cd "$TMP_DIR"
 
 for font in ${FONTS[*]}; do
     wget "$font"
