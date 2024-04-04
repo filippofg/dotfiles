@@ -22,4 +22,5 @@ mv ./*.ttf "$DESTINATION_DIR"
 fc-cache -f -v
 
 cd ..
-rm -r font_tmp
+rm -rf "$TMP_DIR"
+

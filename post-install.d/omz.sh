@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if curl -fsLO https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh; then
-	chmod +x ./install.sh
+    chmod +x ./install.sh
     ./install.sh --unattended --keep-zshrc
-	rm ./install.sh
+    rm ./install.sh
 fi
 
 # Plugins
