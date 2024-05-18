@@ -51,7 +51,7 @@ ln -s "$SOURCE_CONFIG_DIR/Personal.profile" "$HOME/.local/share/konsole"
 #
 # Install packages
 #
-PACKAGES=(
+BASE_PACKAGES=(
 	"git"
 	"curl"
 	"make"
@@ -68,6 +68,17 @@ PACKAGES=(
 	"tldr"
 	"s-tui"
 	"stress"
+)
+APP_PACKAGES=(
+        "firefox"
+        "steam"
+        "bitwarden"
+        "telegram-desktop"
+        "mullvad-vpn-bin"
+        "megasync-bin"
+        "filezilla"
+        "armcord-bin"
+        "vlc"
 )
 # WAYLAND_PACKAGES=(
 # 	"sway"
@@ -87,7 +98,7 @@ PACKAGES=(
 # 	"gammastep"
 # )
 
-sudo pacman -Syu --noconfirm ${PACKAGES[*]} # ${WAYLAND_PACKAGES[*]}
+yay -Syu --noconfirm ${BASE_PACKAGES[*]} ${APP_PACKAGES[*]} # ${WAYLAND_PACKAGES[*]}
 
 #
 # Package configs
