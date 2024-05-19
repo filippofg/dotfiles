@@ -1,0 +1,12 @@
+layer=overlay
+font=Poppins
+width=300
+height=140
+default-timeout=4000
+max-visible=10
+margin=25,25,25,25
+border-radius=2
+border-size=1
+background-color=#151515
+text-color=#b0afa8
+border-color=#b0afa8
