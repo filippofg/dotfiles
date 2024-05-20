@@ -1,0 +1,115 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 34,
+
+    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "custom/storage", "backlight", "pulseaudio", "network", "idle_inhibitor", "keyboard-state", "battery", "cpu", "memory", "temperature", "custom/powermenu"],
+    "keyboard-state" : {
+        "capslock": true,
+        "format": "{icon} ",
+        "format-icons" : {
+            "locked": "", //"\uf023",
+            "unlocked": "" //"\uf09c"
+        }
+    },
+    "clock": {
+        "tooltip-format": "<big>{%I:%M %p}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": " {capacity}%",
+        "interval": 30,
+        "states": {
+            "warning": 25,
+            "critical": 15
+        },
+        "tooltip": false
+    },
+    "network": {
+        "format": "{icon} {signalStrength}%",
+        "format-alt": " {icon} {ipaddr}",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "wifi": [""],
+            "ethernet": [""],
+            "disconnected": ["!"]
+        },
+        "on-click": "alacritty -e nmtui",
+    "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-alt": "{icon} {volume}%",
+        "format-alt-click": "click-right",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "default": ["", "", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "custom/storage": {
+        "format": " {}",
+        "format-alt": " {percentage}%",
+        "format-alt-click": "click-right",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "~/.config/waybar/modules/storage.sh"
+    },
+    "backlight": {
+        "format": "{icon}",
+        "format-alt": "{icon} {percent}%",
+        "format-alt-click": "click-right",
+        "format-icons": ["", ""],
+        "on-scroll-down": "brightnessctl set 5%-",
+        "on-scroll-up": "brightnessctl set 5%+"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": false
+    },
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "memory": {
+        "format": " RAM {percentage}%",
+        "format-alt": " SWAP {swapPercentage}%",
+        "tooltip-format": "{used:0.1f}G/{total:0.1f}G"
+    },
+    "cpu": {
+        "interval": 3,
+        "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
+        "format-icons": [
+             "<span color='#69ff94'>▁</span>", // green
+             "<span color='#2aa9ff'>▂</span>", // blue
+             "<span color='#f8f8f2'>▃</span>", // white
+             "<span color='#f8f8f2'>▄</span>", // white
+             "<span color='#ffffa5'>▅</span>", // yellow
+             "<span color='#ffffa5'>▆</span>", // yellow
+             "<span color='#ff9977'>▇</span>", // orange
+             "<span color='#dd532e'>█</span>"  // red
+        ]
+    },
+    "tray": {
+        "icon-size": 24
+    },
+    "custom/powermenu": {
+        "format": "", //\uf011
+        "on-click": "bash ~/.bin/wofi-powermenu.sh"
+    }
+}
