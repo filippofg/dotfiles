@@ -5,7 +5,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "custom/storage", "pulseaudio", "network", "idle_inhibitor", "keyboard-state", "battery", "cpu", "memory", "temperature", "custom/powermenu"],
+    "modules-right": ["tray", "custom/storage", "pulseaudio", "network", "battery", "cpu", "memory", "temperature", "custom/powermenu"],
     "keyboard-state" : {
         "capslock": true,
         "format": "{icon} ",
