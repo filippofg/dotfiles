@@ -1,18 +1,24 @@
 #!/bin/bash
 
-entries="⇠ Logout\n⏾ Suspend\n❆ Hybernate\n⭮ Reboot\n⏻ Shutdown"
+THIS_FOLDER=$(dirname $0)
 
-selected=$(echo -e $entries|wofi --width 300 --height 250 --dmenu --prompt Power --cache-file /dev/null | awk '{print tolower($2)}')
+ENTRIES="⇠ Logout\n⏾ Suspend\n❆ Hibernate\n⭮ Reboot\n⏻ Shutdown"
+SELECTED=$(echo -e $ENTRIES | wofi --width 300 --height 250 --dmenu --prompt Power --insensitive --cache-file /dev/null | awk '{print tolower($2)}')
 
-case $selected in
-    logout)
-        hyprctl dispatch exit 1;;
-    suspend)
-        exec systemctl suspend;;
-    hybernate)
-        exec systemctl hybernate;;
-    reboot)
-        exec systemctl reboot;;
-    shutdown)
-        exec systemctl poweroff -i;;
+case $SELECTED in
+    "logout")
+        hyprctl dispatch exit 1
+        ;;
+    "suspend")
+        "$THIS_FOLDER"/suspend.sh
+        ;;
+    "hibernate")
+        systemctl hibernate
+        ;;
+    "reboot")
+        systemctl reboot
+        ;;
+    "shutdown")
+        systemctl poweroff -i
+        ;;
 esac
