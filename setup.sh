@@ -80,25 +80,28 @@ APP_PACKAGES=(
         "armcord-bin"
         "vlc"
 )
-# WAYLAND_PACKAGES=(
-# 	"sway"
-# 	"swayidle"
-# 	"swaybg"
-# 	"swayimg"
-# 	"swaylock"
-# 	"waybar"
-# 	"wl-clipboard"
-# 	"bemenu"
-# 	"bemenu-wayland"
-# 	"mako"
-# 	"grim"
-# 	"slurp"
-# 	"swappy"
-# 	"kitty"
-# 	"gammastep"
-# )
+WAYLAND_PACKAGES=(
+	"hyprland"
+        "hyprwayland-scanner"
+	"hyprpaper"
+	"swaylock-effects"
+        "swaybg"
+	"waybar"
+	"wl-clipboard"
+        "cliphist"
+	"bemenu"
+	"bemenu-wayland"
+	"mako"
+	"grim"
+	"slurp"
+	"swappy"
+	"alacritty"
+	"brightnessctl"
+        "nwg-look"
+        "azote"
+)
 
-yay -Syu --noconfirm ${BASE_PACKAGES[*]} ${APP_PACKAGES[*]} # ${WAYLAND_PACKAGES[*]}
+yay -Syu --noconfirm ${BASE_PACKAGES[*]} ${APP_PACKAGES[*]} ${WAYLAND_PACKAGES[*]}
 
 #
 # Package configs

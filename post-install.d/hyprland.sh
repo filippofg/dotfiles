@@ -1,5 +1,5 @@
 #!/bin/bash
 
-hyprpm update
+hyprpm update -v
 yes | hyprpm add https://github.com/outfoxxed/hy3
-hyrpm enable hy3
+hyprpm enable hy3
