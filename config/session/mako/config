@@ -10,3 +10,6 @@ border-size=1
 background-color=#151515
 text-color=#b0afa8
 border-color=#000000
+
+[mode=do-not-disturb]
+invisible=1

@@ -99,6 +99,7 @@ WAYLAND_PACKAGES=(
 	"brightnessctl"
         "nwg-look"
         "azote"
+        "gammastep"
 )
 
 yay -Syu --noconfirm ${BASE_PACKAGES[*]} ${APP_PACKAGES[*]} ${WAYLAND_PACKAGES[*]}
