@@ -1,5 +1,5 @@
 import = [
-"~/.config/alacritty/hellfire.toml",
+"~/.config/alacritty/kaku.toml",
 ]
 
 [env]
