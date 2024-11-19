@@ -1,5 +1,5 @@
-import = [
-"~/.config/alacritty/hellfire.toml",
+general.import = [
+    "~/.config/alacritty/alabaster-dark.toml",
 ]
 
 [env]

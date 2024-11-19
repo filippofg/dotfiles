@@ -75,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Tmux plugin
-ZSH_TMUX_AUTOSTART=false
+ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=false
 ZSH_TMUX_CONFIG=~/.config/tmux/tmux.conf
 
@@ -84,7 +84,15 @@ ZSH_TMUX_CONFIG=~/.config/tmux/tmux.conf
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions tmux docker docker-compose colored-man-pages)
+plugins=(
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    tmux
+    docker
+    docker-compose
+    colored-man-pages
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -133,4 +141,6 @@ export MCFLY_INTERFACE_VIEW=BOTTOM
 export MCFLY_RESULTS_SORT=LAST_RUN
 export MCFLY_DISABLE_MENU=TRUE
 export MCFLY_PROMPT="%"
+
+source $ZSH/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 

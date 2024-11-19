@@ -68,6 +68,7 @@ BASE_PACKAGES=(
 	"tldr"
 	"s-tui"
 	"stress"
+        "fzf"
 )
 APP_PACKAGES=(
         "firefox"
