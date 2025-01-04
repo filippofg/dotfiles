@@ -1,5 +1,7 @@
 plugins/
-monitor.conf
-keyboard.conf
+**/monitor.conf
+**/monitors.conf
+**/keyboard.conf
+**/workspaces.conf
 .netrwhist
 *.BAK
