@@ -1,0 +1,15 @@
+[ButtonColors]
+ButtonBackgroundColorsActive=Accent
+ButtonBackgroundColorsInactive=Accent
+CloseButtonIconColorActive=AsSelected
+CloseButtonIconColorInactive=AsSelected
+
+[Global]
+LookAndFeelSet=org.kde.breezedark.desktop
+
+[Style]
+MenuOpacity=91
+
+[Windeco]
+AnimationsSpeedRelativeSystem=2
+IconSize=IconSmallMedium

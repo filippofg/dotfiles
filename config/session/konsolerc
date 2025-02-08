@@ -1,0 +1,42 @@
+1920x1080 screen: Height=541
+1920x1080 screen: Width=907
+1920x1080 screen: XPosition=248
+1920x1080 screen: YPosition=333
+HDMI-A-0=HDMI-A-0
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAA/////wAAAXQBAAAD+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAAAD/////AAABCwEAAAMAAAOLAAAB1AAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAQAAAN7/////AAAAAAAAAAA=
+
+[Desktop Entry]
+DefaultProfile=Personal.profile
+
+[General]
+ConfigVersion=1
+
+[KonsoleWindow]
+RememberWindowSize=false
+
+[MainWindow]
+0x0 screen: Window-Maximized=true
+1080x1920 screen: Window-Maximized=true
+1920x1080 screen: Height=523
+1920x1080 screen: Width=908
+1920x1080 screen: Window-Maximized=true
+1920x1080 screen: XPosition=724
+1920x1080 screen: YPosition=375
+2 screens: Height=611
+2 screens: Width=1019
+2 screens: Window-Maximized=true
+2560x1440 screen: Height=611
+2560x1440 screen: Width=1019
+HDMI-A-0=HDMI-A-0
+HDMI-A-1-1=HDMI-A-1-1
+MenuBar=Enabled
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+CloseAllTabs=true
+
+[TabBar]
+TabBarVisibility=AlwaysHideTabBar
+
+[UiSettings]
+ColorScheme=

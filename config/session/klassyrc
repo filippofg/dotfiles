@@ -1,0 +1,13 @@
+[Common]
+ButtonIconStyle=StyleOxygen
+
+[Default Windeco Exception 0]
+Enabled=true
+
+[Default Windeco Exception 1]
+Enabled=true
+
+[Windeco]
+AnimationsSpeedRelativeSystem=2
+BoldButtonIcons=BoldIconsFine
+IconSize=IconSmallMedium
