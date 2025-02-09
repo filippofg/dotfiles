@@ -46,7 +46,7 @@ link-config-dir "$SOURCE_CONFIG_DIR/misc" "$HOME"
 
 # konsole profile
 mkdir -p "$HOME/.local/share/konsole"
-ln -s "$SOURCE_CONFIG_DIR/Personal.profile" "$HOME/.local/share/konsole"
+link-config-dir "$SOURCE_CONFIG_DIR/Personal.profile" "$HOME/.local/share/konsole"
 
 #
 # Install packages
