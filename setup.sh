@@ -73,12 +73,11 @@ BASE_PACKAGES=(
 APP_PACKAGES=(
         "firefox"
         "steam"
-        "bitwarden"
         "telegram-desktop"
         "mullvad-vpn-bin"
         "megasync-bin"
         "filezilla"
-        "armcord-bin"
+        "legcord-bin"
         "vlc"
 )
 WAYLAND_PACKAGES=(
