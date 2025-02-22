@@ -6,9 +6,6 @@ update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detai
 [ContentDisplay]
 UsePermissionsFormat=CombinedFormat
 
-[DetailsMode]
-PreviewSize=16
-
 [FileDialogSize]
 2 screens: Window-Maximized=true
 

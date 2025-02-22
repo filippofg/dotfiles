@@ -30,7 +30,6 @@ RememberWindowSize=false
 HDMI-A-0=HDMI-A-0
 HDMI-A-1-1=HDMI-A-1-1
 MenuBar=Enabled
-ToolBarsMovable=Disabled
 
 [Notification Messages]
 CloseAllTabs=true
