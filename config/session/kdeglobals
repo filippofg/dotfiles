@@ -113,6 +113,7 @@ History Items[$e]=file:$HOME/Documents/Calibre Library,file:$HOME/Documents,file
 
 [General]
 AccentColor=0,0,0,0
+ColorScheme=LyraGDarkYaruified
 ColorSchemeHash=040563ffbdb408347d36e92ab3ff8de1d2695666
 LastUsedCustomAccentColor=184,117,220
 XftAntialias=true
@@ -148,12 +149,12 @@ Show Inline Previews=true
 Show Preview=false
 Show Speedbar=true
 Show hidden files=false
-Sort by=Name
+Sort by=Date
 Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=125
-View Style=Simple
+View Style=Detail
 
 [KShortcutsDialog Settings]
 Dialog Size=600,480

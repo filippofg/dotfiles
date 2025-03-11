@@ -36,6 +36,7 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
       { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true},
+      { "nyoom-engineering/oxocarbon.nvim", priority = 1000 , config = false}
     -- add your plugins here
   },
   -- Configure any other settings here. See the documentation for more details.
@@ -70,7 +71,5 @@ require("gruvbox").setup({
   dim_inactive = false,
   transparent_mode = false,
 })
-vim.cmd("colorscheme gruvbox")
-
-require("gruvbox").setup()
-vim.cmd.colorscheme "gruvbox"
+--vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme oxocarbon")
