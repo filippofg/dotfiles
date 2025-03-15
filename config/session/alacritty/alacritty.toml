@@ -1,6 +1,6 @@
-import = [""]
+#import = [""]
 general.import = [
-    "~/.config/alacritty/alabaster-dark.toml",
+    "~/.config/alacritty/oxocarbon.toml",
 ]
 
 [env]
