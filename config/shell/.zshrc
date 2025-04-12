@@ -133,14 +133,16 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # McFly
-eval "$(mcfly init zsh)"
-export MCFLY_KEY_SCHEME=vim
-export MCFLY_FUZZY=2
-export MCFLY_RESULTS=50
-export MCFLY_INTERFACE_VIEW=BOTTOM
-export MCFLY_RESULTS_SORT=LAST_RUN
-export MCFLY_DISABLE_MENU=TRUE
-export MCFLY_PROMPT="%"
+if which mcfly >/dev/null 2>&1 ; then
+    eval "$(mcfly init zsh)"
+    export MCFLY_KEY_SCHEME=vim
+    export MCFLY_FUZZY=2
+    export MCFLY_RESULTS=50
+    export MCFLY_INTERFACE_VIEW=BOTTOM
+    export MCFLY_RESULTS_SORT=LAST_RUN
+    export MCFLY_DISABLE_MENU=TRUE
+    export MCFLY_PROMPT="%"
+fi
 
 source $ZSH/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 
