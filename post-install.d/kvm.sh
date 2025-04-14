@@ -4,7 +4,7 @@ set -e
 set -u
 set -o pipefail
 
-if [ ! -F /etc/debian_version ]; then
+if [ ! -e /etc/debian_version ]; then
     echo "Not a Debian distro, skipping."
     exit 0
 fi
@@ -14,15 +14,14 @@ sudo apt update
 
 echo "Installing virtualization packages..."
 sudo apt install -y \
-    software-properties-common \
     qemu-system \
     libvirt-daemon-system \
     ovmf \
     virt-manager
 
-echo "Enabling contrib and non-free repos..."
-sudo apt-add-repository contrib
-sudo apt-add-repository non-free
+#echo "Enabling contrib and non-free repos..."
+#sudo apt-add-repository contrib
+#sudo apt-add-repository non-free
 
 # libvirt
 echo "Adding current user to libvirt group..."
@@ -33,7 +32,7 @@ VM_NAME=proto-type-00-tiny10
 THIS_FOLDER="$(dirname $0)"
 CONF_DIR="$THIS_FOLDER/../other-configs/usr/share"
 
-sudo cp qemu/* /usr/share/qemu
+sudo cp -r "$CONF_DIR/qemu" /usr/share/
 
 VM_CONF="$VM_NAME.xml"
 cp "$CONF_DIR/$VM_CONF" .
