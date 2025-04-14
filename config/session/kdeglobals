@@ -119,11 +119,11 @@ LastUsedCustomAccentColor=184,117,220
 XftAntialias=true
 XftHintStyle=hintslight
 XftSubPixel=rgb
-fixed=MesloLGS NF,14,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=Poppins Light,14,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=Poppins Light,14,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=Poppins Thin,12,-1,5,250,0,0,0,0,0,0,0,0,0,0,1,Regular
-toolBarFont=Poppins Light,14,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+fixed=MesloLGS NF,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=Poppins Light,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=Poppins Light,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=Poppins Thin,10,-1,5,250,0,0,0,0,0,0,0,0,0,0,1,Regular
+toolBarFont=Poppins Light,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Icons]
 Theme=Papirus-Dark
@@ -165,7 +165,7 @@ MaximumRemoteSize=0
 [WM]
 activeBackground=15,15,15
 activeBlend=171,171,171
-activeFont=Poppins Thin,14,-1,5,250,0,0,0,0,0,0,0,0,0,0,1,Regular
+activeFont=Poppins Thin,12,-1,5,250,0,0,0,0,0,0,0,0,0,0,1,Regular
 activeForeground=222,222,222
 inactiveBackground=22,22,22
 inactiveBlend=234,234,234
