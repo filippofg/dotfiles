@@ -40,6 +40,8 @@ sed -i 's/\/usr\/share\/edk2\/x64\/OVMF_VARS.4m.fd/\/usr\/share\/OVMF\/OVMF_VARS
 sed -i 's/\/usr\/share\/edk2\/x64\/OVMF_CODE.4m.fd/\/usr\/share\/OVMF\/OVMF_CODE_4M.fd/g' $VM_CONF
 
 sudo virsh define --file $VM_CONF
+rm $VM_CONF
+
 echo ""
 echo "REMEMBER: edit the VM with the appropriate devices for passthrough."
 echo ""
