@@ -3,7 +3,7 @@
 THIS_FOLDER=$(dirname $0)
 
 ENTRIES="⇠ Logout\n⏾ Suspend\n❆ Hibernate\n⭮ Reboot\n⏻ Shutdown"
-SELECTED=$(echo -e $ENTRIES | wofi --width 300 -L 6 --dmenu --prompt Power --insensitive --cache-file /dev/null | awk '{print tolower($2)}')
+SELECTED=$(echo -e $ENTRIES | wofi --width 300 --height 130 --dmenu --prompt Power --insensitive --cache-file /dev/null | awk '{print tolower($2)}')
 
 case $SELECTED in
     "logout")
