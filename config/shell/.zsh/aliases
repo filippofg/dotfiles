@@ -53,7 +53,7 @@ alias py='python'
 alias ptop='powertop'
 #alias todo='vim ~/.todo'
 #alias colorpicker='grabc'
-alias nfetch='neofetch'
+alias neofetch='fastfetch'
 
 # Wayland session aliases
 alias swayconf='$EDITOR ~/.config/sway/config'
