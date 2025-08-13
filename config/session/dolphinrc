@@ -9,6 +9,11 @@ UsePermissionsFormat=CombinedFormat
 [DetailsMode]
 PreviewSize=22
 
+[ExtractDialog]
+2 screens: Height=480
+2 screens: Width=927
+DirHistory[$e]=$HOME/Downloads/mmsf2/
+
 [FileDialogSize]
 2 screens: Window-Maximized=true
 

@@ -1,14 +1,21 @@
 [ButtonColors]
 ButtonBackgroundColorsActive=Accent
 ButtonBackgroundColorsInactive=Accent
+ButtonBackgroundOpacityActive=65
+ButtonBackgroundOpacityInactive=65
 CloseButtonIconColorActive=AsSelected
 CloseButtonIconColorInactive=AsSelected
+PoorBackgroundContrastThresholdActive=1
+PoorBackgroundContrastThresholdInactive=1
+UseHoverAccentActive=true
+UseHoverAccentInactive=true
 
 [Global]
 LookAndFeelSet=org.kde.breezedark.desktop
 
 [Style]
-MenuOpacity=91
+FrameCustomCornerRadius=10
+MenuOpacity=60
 
 [Windeco]
 AnimationsSpeedRelativeSystem=2

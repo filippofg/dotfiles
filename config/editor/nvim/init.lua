@@ -6,7 +6,6 @@ vim.cmd("set number")
 vim.cmd("set termguicolors")
 vim.cmd("set guicursor=")
 vim.cmd("autocmd OptionSet guicursor noautocmd set guicursor=")
-
 -- require("config.lazy")
 
 -- Bootstrap lazy.nvim
@@ -36,7 +35,9 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
       { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true},
-      { "nyoom-engineering/oxocarbon.nvim", priority = 1000 , config = false}
+      { "nyoom-engineering/oxocarbon.nvim", priority = 1000 , config = false},
+--      { "shaunsingh/nord.nvim", priority = 900 , config = false},
+--      { "marc0246/citylights.nvim", priority = 800 , config = false}
     -- add your plugins here
   },
   -- Configure any other settings here. See the documentation for more details.
@@ -73,3 +74,4 @@ require("gruvbox").setup({
 })
 --vim.cmd("colorscheme gruvbox")
 vim.cmd("colorscheme oxocarbon")
+--vim.cmd("colorscheme citylights")

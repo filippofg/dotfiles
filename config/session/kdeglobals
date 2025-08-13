@@ -24,13 +24,13 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=60,60,60
+BackgroundAlternate=81,118,83
 BackgroundNormal=30,30,30
-DecorationFocus=60,60,60
-DecorationHover=150,150,150
-ForegroundActive=61,174,233
+DecorationFocus=104,157,106
+DecorationHover=104,157,106
+ForegroundActive=104,157,106
 ForegroundInactive=189,195,199
-ForegroundLink=41,128,185
+ForegroundLink=104,157,106
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=250,250,250
@@ -40,25 +40,53 @@ ForegroundVisited=127,140,141
 [Colors:Complementary]
 BackgroundAlternate=66,66,66
 BackgroundNormal=51,51,51
-DecorationFocus=49,91,239
-DecorationHover=49,91,239
-ForegroundActive=246,116,0
+DecorationFocus=104,157,106
+DecorationHover=104,157,106
+ForegroundActive=104,157,106
 ForegroundInactive=136,136,136
-ForegroundLink=49,91,239
+ForegroundLink=150,227,153
 ForegroundNegative=237,21,21
 ForegroundNeutral=201,206,59
 ForegroundNormal=222,222,222
 ForegroundPositive=17,209,22
 ForegroundVisited=49,91,239
 
+[Colors:Header]
+BackgroundAlternate[$d]
+BackgroundNormal[$d]
+DecorationFocus[$d]
+DecorationHover[$d]
+ForegroundActive[$d]
+ForegroundInactive[$d]
+ForegroundLink[$d]
+ForegroundNegative[$d]
+ForegroundNeutral[$d]
+ForegroundNormal[$d]
+ForegroundPositive[$d]
+ForegroundVisited[$d]
+
+[Colors:Header][Inactive]
+BackgroundAlternate[$d]
+BackgroundNormal[$d]
+DecorationFocus[$d]
+DecorationHover[$d]
+ForegroundActive[$d]
+ForegroundInactive[$d]
+ForegroundLink[$d]
+ForegroundNegative[$d]
+ForegroundNeutral[$d]
+ForegroundNormal[$d]
+ForegroundPositive[$d]
+ForegroundVisited[$d]
+
 [Colors:Selection]
-BackgroundAlternate=79,127,239
-BackgroundNormal=223,74,22
-DecorationFocus=60,60,60
-DecorationHover=234,234,234
-ForegroundActive=252,252,252
-ForegroundInactive=50,150,255
-ForegroundLink=253,188,75
+BackgroundAlternate=81,118,83
+BackgroundNormal=81,118,83
+DecorationFocus=104,157,106
+DecorationHover=104,157,106
+ForegroundActive=104,157,106
+ForegroundInactive=255,255,255
+ForegroundLink=150,227,153
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=255,255,255
@@ -68,11 +96,11 @@ ForegroundVisited=128,152,239
 [Colors:Tooltip]
 BackgroundAlternate=77,77,77
 BackgroundNormal=50,50,50
-DecorationFocus=60,60,60
-DecorationHover=234,234,234
-ForegroundActive=49,91,239
+DecorationFocus=104,157,106
+DecorationHover=104,157,106
+ForegroundActive=104,157,106
 ForegroundInactive=189,195,199
-ForegroundLink=49,91,239
+ForegroundLink=150,227,153
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=222,222,222
@@ -82,11 +110,11 @@ ForegroundVisited=127,140,141
 [Colors:View]
 BackgroundAlternate=30,30,30
 BackgroundNormal=30,30,30
-DecorationFocus=80,80,80
-DecorationHover=255,90,75
-ForegroundActive=49,91,239
+DecorationFocus=104,157,106
+DecorationHover=104,157,106
+ForegroundActive=104,157,106
 ForegroundInactive=255,255,255
-ForegroundLink=49,91,239
+ForegroundLink=104,157,106
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=234,234,234
@@ -96,11 +124,11 @@ ForegroundVisited=120,120,120
 [Colors:Window]
 BackgroundAlternate=66,66,66
 BackgroundNormal=15,15,15
-DecorationFocus=150,150,150
-DecorationHover=150,150,150
-ForegroundActive=49,91,239
+DecorationFocus=104,157,106
+DecorationHover=104,157,106
+ForegroundActive=104,157,106
 ForegroundInactive=136,136,136
-ForegroundLink=49,91,239
+ForegroundLink=104,157,106
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=222,222,222
@@ -109,21 +137,21 @@ ForegroundVisited=250,250,250
 
 [DirSelect Dialog]
 DirSelectDialog Size=1028,693
-History Items[$e]=file:$HOME/Documents/Calibre Library,file:$HOME/Documents,file:///run/media/phil/media/docker,file:///media/shared/SteamLibrary/steamapps/common,file:$HOME/Music/OSTs,file:$HOME/Documents/ISO,file:$HOME/Pictures/Wallpapers/2k,file:$HOME/Music,file:$HOME
+History Items[$e]=file:///media/shared/SteamLibrary/steamapps/compatdata/3386456357/pfx/drive_c/users/steamuser/AppData/Local/Soulframe/Downloaded/Public/Tools,file:$HOME/Documents/Calibre Library,file:$HOME/Documents,file:///run/media/phil/media/docker,file:///media/shared/SteamLibrary/steamapps/common,file:$HOME/Music/OSTs,file:$HOME/Documents/ISO,file:$HOME/Pictures/Wallpapers/2k,file:$HOME/Music,file:$HOME
+Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xa4\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
-AccentColor=0,0,0,0
-ColorScheme=LyraGDarkYaruified
+AccentColor=104,157,106
 ColorSchemeHash=040563ffbdb408347d36e92ab3ff8de1d2695666
-LastUsedCustomAccentColor=184,117,220
+LastUsedCustomAccentColor=104,157,106
 XftAntialias=true
 XftHintStyle=hintslight
 XftSubPixel=rgb
-fixed=MesloLGS NF,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=Poppins Light,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=Poppins Light,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=Poppins Thin,10,-1,5,250,0,0,0,0,0,0,0,0,0,0,1,Regular
-toolBarFont=Poppins Light,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+fixed=MesloLGS NF,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=Poppins Light,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=Poppins Light,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=Poppins Thin,9,-1,5,250,0,0,0,0,0,0,0,0,0,0,1,Regular
+toolBarFont=Poppins Light,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Icons]
 Theme=Papirus-Dark
@@ -149,10 +177,10 @@ Show Inline Previews=true
 Show Preview=false
 Show Speedbar=true
 Show hidden files=false
-Sort by=Date
+Sort by=Name
 Sort directories first=true
 Sort hidden files last=false
-Sort reversed=false
+Sort reversed=true
 Speedbar Width=125
 View Style=Detail
 
@@ -165,7 +193,7 @@ MaximumRemoteSize=0
 [WM]
 activeBackground=15,15,15
 activeBlend=171,171,171
-activeFont=Poppins Thin,12,-1,5,250,0,0,0,0,0,0,0,0,0,0,1,Regular
+activeFont=Poppins Thin,11,-1,5,250,0,0,0,0,0,0,0,0,0,0,1,Regular
 activeForeground=222,222,222
 inactiveBackground=22,22,22
 inactiveBlend=234,234,234
